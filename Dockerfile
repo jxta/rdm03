@@ -12,4 +12,4 @@ USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
-CMD ["/opt/conda/bin/jupyter"]
+CMD ["/opt/conda/bin/jupyter","/home/jovyan/sato.ipynb"]
