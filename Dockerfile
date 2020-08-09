@@ -11,3 +11,6 @@ COPY . ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
+
+EXPOSE　8888
+CMD ["/opt/conda/bin/jupyter", "/home/jovyan/*ipynb"]
