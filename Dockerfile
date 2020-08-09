@@ -12,4 +12,6 @@ USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
-CMD ["/opt/conda/bin/jupyter","/home/jovyan/佐藤予想実験環境構築.ipynb"]
+COPY /repo2docker-entrypoint /usr/local/bin/repo2docker-entrypoint
+ENTRYPOINT ["/usr/local/bin/repo2docker-entrypoint"]
+CMD ["jupyter", "notebook", "--ip", "0.0.0.0"]
