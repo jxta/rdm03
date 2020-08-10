@@ -1,5 +1,5 @@
-#FROM jupyter/datascience-notebook:latest
-FROM jxta/vcp_client:rdm03
+FROM jupyter/datascience-notebook:latest
+#FROM jxta/vcp_client:rdm03
 RUN pip install --no-cache-dir nbgitpuller
 
 ARG NB_USER=jovyan
