@@ -23,17 +23,17 @@ ENV PYTHONPATH=/notebooks/notebook/vcpsdk
 RUN sed -i '/jessie-updates/d' /etc/apt/sources.list
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-  cron=3.0pl1-128.1ubuntu1 \
-  fonts-vlgothic=20141206-4ubuntu1 \
-  ldap-utils=2.4.45+dfsg-1ubuntu1.4 \
-  less=487-0.1 \
-  rsync=3.1.2-2.1ubuntu1 \
-  tcptraceroute=1.5beta7+debian-4build1 \
+  cron \
+  fonts-vlgothic \
+  ldap-utils \
+  less \
+  rsync \
+  tcptraceroute \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
 # netaddr==0.7.19 netifaces==0.10.5
-RUN /opt/conda/bin/conda install -y nbconvert=5.5.0 jsonschema=3.0.1 simplejson=3.16.0 ruamel.yaml=0.15.95 netaddr netifaces
+RUN /opt/conda/bin/conda install -y nbconvert jsonschema simplejson ruamel.yaml netaddr netifaces
 COPY vcpcli_requirements.txt .
 RUN /opt/conda/bin/python -m pip install --ignore-installed PyYAML -r vcpcli_requirements.txt
 
@@ -47,7 +47,7 @@ RUN update-ca-certificates
 ENV REQUESTS_CA_BUNDLE /etc/ssl/certs/ca-certificates.crt
 
 # setup supervisor for jupyter
-RUN pip install supervisor==4.0.4
+RUN pip install supervisor
 RUN mkdir /etc/supervisor
 COPY supervisord.conf /etc/supervisor/
 COPY supervisor_jupyter.conf /etc/supervisor/conf.d/jupyter.ini
