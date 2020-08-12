@@ -40,10 +40,10 @@ RUN update-ca-certificates
 ENV REQUESTS_CA_BUNDLE /etc/ssl/certs/ca-certificates.crt
 
 # setup supervisor for jupyter
-RUN pip install supervisor
-RUN mkdir /etc/supervisor
-COPY supervisord.conf /etc/supervisor/
-COPY supervisor_jupyter.conf /etc/supervisor/conf.d/jupyter.ini
+#RUN pip install supervisor
+#RUN mkdir /etc/supervisor
+#COPY supervisord.conf /etc/supervisor/
+#COPY supervisor_jupyter.conf /etc/supervisor/conf.d/jupyter.ini
 
 # JupyterPassword change script
 WORKDIR /notebooks/notebook
