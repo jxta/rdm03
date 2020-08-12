@@ -1,0 +1,120 @@
+/*
+Placeholder for custom user CSS
+
+mainly to be overridden in profile/static/custom/custom.css
+
+This will always be an empty file in IPython
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+
+#ipython_notebook img{
+    display:block;
+    background: url(logo.png) no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 28px;
+    padding-left: 150px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.CodeMirror pre {   /* area of code cell */
+	font-family: "Source Code Pro", monospace;
+}
+
+.output_text > pre {  /* pre formatted area in output of code cell */
+	font-family: "Source Code Pro", monospace;
+}
+
+.text_cell pre, .text_cell code {      /* pre formatted area in markdown cell */
+        font-family: "Source Code Pro", monospace;
+}
+
+.terminal {
+        font-family: "Source Code Pro", monospace !important;
+}
+
+.output_area .ui-tabs-anchor {
+    font-size: 0.6em;
+}
+
+.output_area .output_subarea {
+	border: none;
+	max-width: none;
+}
+
+.output_area .ui-tabs-nav {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	background: transparent;
+}
+
+.output_area .ui-tabs-nav button.ui-button-icon-only {
+	border: none;
+	background: transparent;
+}
+
+.output_area li.ui-state-default {
+	background: #CCC !important;
+}
+
+.output_area li.ui-state-default a {
+	color: #AAA;
+}
+
+.output_area li.ui-state-active {
+	background: white !important;
+}
+
+.output_area li.ui-state-active a {
+	color: black;
+}
+
+/*
+ * markdown custom by vcp
+ */
+/* pre in markdown */
+.rendered_html pre {
+  background-color: #f5f2db;
+  margin: 8px;
+  padding: 8px;
+}
+
+.rendered_html pre code {
+  background-color: #f5f2db;
+}
+
+#notebook .rendered_html pre, #notebook .rendered_html pre code  {
+  background-color: #f5f2db;
+}
+
+/* h1, h2, h3, h4 */
+.rendered_html h1 {
+  border-left: 12px solid #E0A37E;
+  padding: 0 9px 0;
+}
+.rendered_html h2 {
+  border-left: 8px solid #856859;
+  padding: 0 9px 0;
+}
+.rendered_html h3 {
+  border-left: 6px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  padding: 0 9px 0;
+}
+.rendered_html h4 {
+  border-left: 6px solid #fcd;
+  padding: 0 9px 0;
+}
+.rendered_html table {
+  margin-left: 0;
+}
+.rendered_html img, .rendered_html svg {
+    max-width: 100%;
+    max-height: 384px;
+}
+

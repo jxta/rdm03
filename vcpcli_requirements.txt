@@ -1,0 +1,5 @@
+docopt==0.6.2
+colorama==0.4.1
+awscli==1.16.225
+azure-cli==2.0.80
+#ruamel.yaml==0.15.74
