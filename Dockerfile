@@ -82,3 +82,15 @@ RUN cat /home/$NB_USER/.jupyter/custom/custom.css.vcp >> /home/$NB_USER/.jupyter
 RUN chown $NB_USER:$NB_GROUP /home/$NB_USER/.jupyter/custom/custom.css
 
 RUN chown -R $NB_USER:$NB_GROUP /notebooks/notebook
+
+ARG NB_USER=jovyan
+ARG NB_UID=1000
+ENV USER ${NB_USER}
+ENV NB_UID ${NB_UID}
+ENV HOME /home/${NB_USER}
+
+# Make sure the contents of our repo are in ${HOME}
+COPY . ${HOME}
+USER root
+RUN chown -R ${NB_UID} ${HOME}
+USER ${NB_USER}
