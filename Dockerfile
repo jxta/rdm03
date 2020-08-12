@@ -31,8 +31,8 @@ COPY vcpcli_requirements.txt .
 RUN /opt/conda/bin/python -m pip install --ignore-installed PyYAML -r vcpcli_requirements.txt
 
 # for runtime directory
-#RUN mkdir -p "/home/$NB_USER/.local/share/jupyter/runtime"
-#RUN chown -R "$NB_USER:$NB_GROUP" "/home/$NB_USER/.local/share/jupyter"
+RUN mkdir -p "/home/$NB_USER/.local/share/jupyter/runtime"
+RUN chown -R "$NB_USER:$NB_GROUP" "/home/$NB_USER/.local/share/jupyter"
 
 # install ca certificate of VCP Manager
 COPY tokyo_ca.crt chiba_ca.crt /usr/local/share/ca-certificates/
