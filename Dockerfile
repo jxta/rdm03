@@ -7,6 +7,7 @@
 # docker login が必要
 FROM jxta/niicloudoperationnotebook:20200812
 
+USER root
 # python3 path
 ENV PATH /opt/conda/bin:/notebooks/notebook/vcpsdk/cli:$PATH
 # PYTHONPATH for notebook
