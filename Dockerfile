@@ -56,7 +56,7 @@ ENV GIT_EDITOR vi
 # gitのブランチ名、補間
 COPY git-prompt /etc/
 
-ENTRYPOINT ["/opt/conda/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]
+#ENTRYPOINT ["/opt/conda/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]
 
 # VCPでのJupyter Notebook固有の設定
 # Jupyter Notebook内のユーザとグループ
