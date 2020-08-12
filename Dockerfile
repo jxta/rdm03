@@ -26,7 +26,7 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 # netaddr==0.7.19 netifaces==0.10.5
-RUN /opt/conda/bin/conda install -y nbconvert jsonschema simplejson ruamel.yaml=0.15.95 netaddr netifaces
+RUN /opt/conda/bin/conda install -y nbconvert jsonschema simplejson ruamel.yaml netaddr netifaces
 COPY vcpcli_requirements.txt .
 RUN /opt/conda/bin/python -m pip install --ignore-installed PyYAML -r vcpcli_requirements.txt
 
