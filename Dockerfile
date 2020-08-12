@@ -5,7 +5,7 @@
 # hadolint ignore=DL3007
 #FROM niicloudoperation/notebook:latest@sha256:0ef08db97dbdbdc2931eb4960b0533ec811d302d440440a51388be642c5c151a as notebook_common
 # docker login が必要
-FROM harbor.vcloud.nii.ac.jp/vcp_dev/base-notebook:20190730-0ef0
+FROM jxta/niicloudoperationnotebook:20200812
 
 ARG IMAGE_TAG
 ENV VCP_CONTAINER_VERSION ${IMAGE_TAG}
