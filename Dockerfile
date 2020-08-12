@@ -46,10 +46,10 @@ ENV REQUESTS_CA_BUNDLE /etc/ssl/certs/ca-certificates.crt
 #COPY supervisor_jupyter.conf /etc/supervisor/conf.d/jupyter.ini
 
 # JupyterPassword change script
-WORKDIR /notebooks/notebook
-RUN chown "$NB_USER" .
-RUN mkdir tools
-COPY chpasswd.sh tools
+# /notebooks/notebook
+#RUN chown "$NB_USER" .
+#RUN mkdir tools
+#COPY chpasswd.sh tools
 
 ENV GIT_EDITOR vi
 
