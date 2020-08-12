@@ -47,9 +47,9 @@ ENV REQUESTS_CA_BUNDLE /etc/ssl/certs/ca-certificates.crt
 
 # JupyterPassword change script
 # /notebooks/notebook
-#RUN chown "$NB_USER" .
-#RUN mkdir tools
-#COPY chpasswd.sh tools
+RUN chown "$NB_USER" .
+RUN mkdir tools
+COPY chpasswd.sh tools
 
 ENV GIT_EDITOR vi
 
